@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HelloAnalytics" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/helloanalytics.brs"/>
+  <script type="text/brightscript" uri="pkg:/source/library/Segment SDK/SegmentAnalyticsConnector.brs"/>
+	<children>
+
+		<Label id="helloLabel"
+			text="Hello Analytics!"
+			width="1280"
+			height="720"
+			horizAlign="center"
+			vertAlign="center"/>
+
+		  <Label id="actionLabel"
+		  	wrap="true"
+			text="Press Ok to start video playback. Any other button (except Back) on the remote will send an event to Segment"
+			width="800"
+			height="360"
+			horizAlign="center"
+			vertAlign="center"
+			translation="[250,300]"/>
+
+      	<Label id="statusLabel"
+			text="status"
+			width="640"
+			height="360"
+			horizAlign="center"
+			vertAlign="center"
+			translation="[318,400]"/>
+
+	   <Video id="VideoPlayer"
+	   		contentIsPlaylist="true"
+			visible="false"/>
+
+	  <SegmentAnalyticsTask id="analyticsTask"/>
+	  
+    </children>
+</component>
